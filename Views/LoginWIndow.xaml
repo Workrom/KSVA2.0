@@ -8,9 +8,9 @@
         Title="LoginWIndow" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="Usernametxb" HorizontalAlignment="Left" Margin="321,134,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Passwordtxb" HorizontalAlignment="Left" Margin="321,183,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="321,261,0,0" VerticalAlignment="Top" Height="23" Width="120" Click="LoginButton_Click"/>
         <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="594,346,0,0" VerticalAlignment="Top" Height="23" Width="120" Click="RegisterButton_Click"/>
+        <PasswordBox x:Name="Passwordtxb" HorizontalAlignment="Left" Margin="321,185,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

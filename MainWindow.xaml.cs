@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using KSVA2._0_WPF.Data;
+using KSVA2._0_WPF.Services;
+using KSVA2._0_WPF.Views;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,5 +22,17 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private void Profilebtn_Click(object sender, RoutedEventArgs e)
+    {
+        if (SessionManager.CurrentUser.role == "student")
+        {
+            new StudentProfileWindow().Show();
+        }
+        else if(SessionManager.CurrentUser.role == "teacher")
+        {
+            new TeacherProfileWindow().Show();
+        }
     }
 }

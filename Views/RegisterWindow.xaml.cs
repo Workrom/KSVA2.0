@@ -53,8 +53,14 @@ namespace KSVA2._0_WPF.Views
                 string username = Usernametxb.Text.Trim();
                 string password = Passwordtxb.Text.Trim();
                 string phone = Phonetxb.Text.Trim();
-                if (!DateOnly.TryParse(Birthdtp.SelectedDate.ToString(), out DateOnly dob))
+
+                if (Birthdtp.SelectedDate == null)
+                {
+                    MessageBox.Show($"Please select a valid birth date.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
+                }
+
+                var dob = DateOnly.FromDateTime(Birthdtp.SelectedDate.Value);
 
                 string? subject = null;
                 decimal? price = null;
@@ -68,8 +74,7 @@ namespace KSVA2._0_WPF.Views
                 }
 
                 var service = new RegisterService();
-                bool success = service.Register(username,password,phone,dob,role,subject,price,expertise
-                );
+                bool success = service.Register(username,password,phone,dob,role,subject,price,expertise);
 
                 if (success)
                 {

@@ -5,9 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KSVA2._0_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SearchWindow" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="Teachersdg" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,203,0,0"/>
+        <Label x:Name="Searchllbl" Content="Search" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="48"/>
+        <Button x:Name="Profilebtn" HorizontalAlignment="Left" Margin="726,16,0,0" VerticalAlignment="Top" Height="53" Width="53" RenderTransformOrigin="0.493,0.518" Click="Profilebtn_Click">
+            <Image Source="Images/profile.jpg" Stretch="Uniform"/>
+        </Button>
+        <TextBox x:Name="Nametxb" HorizontalAlignment="Left" Margin="21,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <CheckBox x:Name="Namecbx" Content="Name" HorizontalAlignment="Left" Margin="55,117,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Expertisecbx1" Content="Expertise" HorizontalAlignment="Left" Margin="229,117,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Expertisecmx" HorizontalAlignment="Left" Margin="203,137,0,0" VerticalAlignment="Top" Width="120" Height="18" IsEnabled="False">
+            <ComboBoxItem Content="high school"/>
+            <ComboBoxItem Content="university"/>
+            <ComboBoxItem Content="scientist"/>
+        </ComboBox>
+        <CheckBox x:Name="Namecbx_Copy1" Content="Subject" HorizontalAlignment="Left" Margin="412,117,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Subjectcmx" HorizontalAlignment="Left" Margin="381,139,0,0" VerticalAlignment="Top" Width="120" Height="18" IsEnabled="False">
+            <ComboBoxItem Content="high school"/>
+            <ComboBoxItem Content="university"/>
+            <ComboBoxItem Content="scientist"/>
+        </ComboBox>
+        <Slider x:Name="Pricesdr" HorizontalAlignment="Left" Margin="564,139,0,0" VerticalAlignment="Top" Width="120" Maximum="1000" IsEnabled="False"/>
+        <CheckBox x:Name="Pricecbx" Content="Price" HorizontalAlignment="Left" Margin="596,120,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

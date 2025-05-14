@@ -1,4 +1,6 @@
-﻿using KSVA2._0_WPF.Models;
+﻿using KSVA2._0_WPF.Data;
+using KSVA2._0_WPF.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +20,14 @@ namespace KSVA2._0_WPF.Services
 
         public user? Login(string username, string password)
         {
-            return _context.users
-                .FirstOrDefault(u => u.name == username && u.password == password);
+            var user = _context.users.Include(u => u.teacher_profile).FirstOrDefault(u => u.name == username);
+            if (user != null && PassHashService.Verify(password, user.password))
+            {
+                SessionManager.InitializeSession(user);
+
+                return user;
+            }
+            return null;
         }
     }
 }

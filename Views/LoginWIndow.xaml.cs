@@ -28,12 +28,12 @@ namespace KSVA2._0_WPF.Views
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             var service = new LoginService();
-            var user = service.Login(Usernametxb.Text, Passwordtxb.Text);
+            var user = service.Login(Usernametxb.Text, Passwordtxb.Password);
 
             if (user != null)
             {
                 MessageBox.Show($"Welcome, {user.name}!");
-                // new MainWindow().Show(); // TODO: Add your dashboard window
+                new MainWindow().Show();
                 this.Close();
             }
             else

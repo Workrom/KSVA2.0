@@ -10,7 +10,6 @@ namespace KSVA2._0_WPF.Services
     internal class RegisterService
     {
         private readonly ApplicationContext _context;
-
         public RegisterService()
         {
             _context = new ApplicationContext();
@@ -21,7 +20,7 @@ namespace KSVA2._0_WPF.Services
             var user = new user
             {
                 name = username,
-                password = password,
+                password = PassHashService.Hash(password),
                 phone = phone,
                 date_of_birth = dob,
                 role = role
