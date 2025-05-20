@@ -21,7 +21,7 @@ namespace KSVA2._0_WPF.Services
         public user? Login(string username, string password)
         {
             var user = _context.users.Include(u => u.teacher_profile).FirstOrDefault(u => u.name == username);
-            if (user != null && PassHashService.Verify(password, user.password))
+            if (user != null && password == user.password)
             {
                 SessionManager.InitializeSession(user);
 

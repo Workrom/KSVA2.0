@@ -8,12 +8,12 @@
         Title="StudentProfileWindow" Height="320" Width="300">
     <Grid Margin="0,0,0,-16">
         <!--Name-->
-        <Label x:Name="Namelbl" Visibility="Visible" Content="Name: " Margin="48,28,202,0" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="Nametxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,33,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="Namelbl" Visibility="Visible" Content="Name: " Margin="48,26,202,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="Nametxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Pohne-->
-        <Label x:Name="Phonelbl" Visibility="Visible" Content="Phone:" Margin="48,73,202,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.365,0.481"/>
-        <TextBox x:Name="Phonetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,78,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="168"/>
+        <Label x:Name="Phonelbl" Visibility="Visible" Content="Phone:" Margin="49,83,201,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.365,0.481"/>
+        <TextBox x:Name="Phonetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="104,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="168"/>
 
         <!--Role-->
         <Label x:Name="Rolelbl" Visibility="Visible" Content="Role:" Margin="48,113,202,0" VerticalAlignment="Top" Width="50"/>
@@ -24,10 +24,13 @@
         <TextBox x:Name="Dobtxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="136,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="144"/>
 
 
-        <Button x:Name="Changebtn" Content="Change settings" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Changebtn_Click"/>
+        <Button x:Name="Changebtn" Content="Change settings" HorizontalAlignment="Left" Margin="29,253,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Changebtn_Click"/>
 
         <Button x:Name="Applybtn" IsEnabled="False" Visibility="Visible" Content="Apply" HorizontalAlignment="Left" Margin="29,227,0,0" VerticalAlignment="Top" Height="21" Width="100" Click="Applybtn_Click"/>
         <Button x:Name="Cancelbtn" IsEnabled="False" Visibility="Visible" Content="Cancel" HorizontalAlignment="Left" Margin="172,227,0,0" VerticalAlignment="Top" Height="21" Width="100" Click="Cancelbtn_Click"/>
+        <Button x:Name="Logoutbtn" Content="Log out" HorizontalAlignment="Left" Margin="172,253,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Logoutbtn_Click"/>
+        <Label x:Name="Passwordlbl" Content="Password: " HorizontalAlignment="Left" Margin="48,52,0,0" VerticalAlignment="Top" Width="62"/>
+        <TextBox x:Name="Passwordtxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="119,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
 
     </Grid>

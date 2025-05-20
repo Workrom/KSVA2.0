@@ -5,29 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KSVA2._0_WPF.Views"
         mc:Ignorable="d"
-        Title="TeacherProfileWindow" Height="340" Width="300">
+        Title="TeacherProfileWindow" Height="340" Width="310">
     <Grid>
         <!--Name-->
         <Label x:Name="Namelbl" Content="Name: " HorizontalAlignment="Left" Margin="44,10,0,0" VerticalAlignment="Top" Width="51"/>
         <TextBox x:Name="Nametxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Phone-->
-        <Label x:Name="Phonelbl" Content="Phone:" HorizontalAlignment="Left" Margin="44,41,0,0" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="Phonetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="Phonelbl" Content="Phone:" HorizontalAlignment="Left" Margin="44,62,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBox x:Name="Phonetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Role-->
-        <Label x:Name="Rolelbl" Content="Role:" HorizontalAlignment="Left" Margin="44,72,0,0" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="Roletxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="95,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="Rolelbl" Content="Role:" HorizontalAlignment="Left" Margin="44,88,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBox x:Name="Roletxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="95,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Expertise-->
-        <Label x:Name="Expertiselbl" Content="Expertise:" HorizontalAlignment="Left" Margin="44,103,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label x:Name="Expertiselbl" Content="Expertise:" HorizontalAlignment="Left" Margin="44,119,0,0" VerticalAlignment="Top" Width="65"/>
         <ComboBox x:Name="Expertisecbx"
                   IsReadOnly="True"
                   IsHitTestVisible="False"
                   Background="Transparent"
                   BorderThickness="0"
                   HorizontalAlignment="Left"
-                  Margin="109,105,0,0"
+                  Margin="109,121,0,0"
                   VerticalAlignment="Top"
                   Width="130"
                   Height="23">
@@ -37,21 +37,24 @@
         </ComboBox>
 
         <!--Subject-->
-        <Label x:Name="Subjectlbl" Content="Subject:" HorizontalAlignment="Left" Margin="44,138,0,0" VerticalAlignment="Top" Width="51"/>
-        <TextBox x:Name="Subjecttxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="Subjectlbl" Content="Subject:" HorizontalAlignment="Left" Margin="44,154,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBox x:Name="Subjecttxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="100,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Price-->
-        <Label x:Name="Pricelbl" Content="Price:" HorizontalAlignment="Left" Margin="44,169,0,0" VerticalAlignment="Top" Width="41"/>
-        <TextBox x:Name="Pricetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="95,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <Label x:Name="Pricelbl" Content="Price:" HorizontalAlignment="Left" Margin="44,185,0,0" VerticalAlignment="Top" Width="41"/>
+        <TextBox x:Name="Pricetxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="95,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
 
         <!--Date of birth-->
-        <Label x:Name="Doblbl" Content="Date of birth:" HorizontalAlignment="Left" Margin="44,200,0,0" VerticalAlignment="Top" Width="89"/>
-        <TextBox x:Name="Dobtxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="126,206,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+        <Label x:Name="Doblbl" Content="Date of birth:" HorizontalAlignment="Left" Margin="44,216,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox x:Name="Dobtxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="126,222,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
 
-        <Button x:Name="Changebtn" Content="Change settings" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Changebtn_Click"/>
-        <Button x:Name="Statisticsbtn" Content="Statistics" HorizontalAlignment="Left" Margin="168,274,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758"/>
-        
-        <Button x:Name="Cancelbtn" Content="Cancel" HorizontalAlignment="Left" Margin="175,248,0,0" VerticalAlignment="Top" Height="21" Width="86" Click="Cancelbtn_Click" IsEnabled="False"/>
-        <Button x:Name="Applybtn" Content="Apply" HorizontalAlignment="Left" Margin="53,248,0,0" VerticalAlignment="Top" Height="21" Width="85" Click="Applybtn_Click" IsEnabled="False"/>
+        <Button x:Name="Changebtn" Content="Change settings" HorizontalAlignment="Left" Margin="13,274,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Changebtn_Click"/>
+        <Button x:Name="Statisticsbtn" Content="Statistics" HorizontalAlignment="Left" Margin="118,274,0,0" VerticalAlignment="Top" Height="21" Width="100" RenderTransformOrigin="0.966,0.758" Click="Statisticsbtn_Click"/>
+
+        <Button x:Name="Cancelbtn" Content="Cancel" HorizontalAlignment="Left" Margin="185,248,0,0" VerticalAlignment="Top" Height="21" Width="86" Click="Cancelbtn_Click" IsEnabled="False"/>
+        <Button x:Name="Applybtn" Content="Apply" HorizontalAlignment="Left" Margin="63,248,0,0" VerticalAlignment="Top" Height="21" Width="85" Click="Applybtn_Click" IsEnabled="False"/>
+        <Button x:Name="Logoutbtn" Content="Log out" HorizontalAlignment="Left" Margin="223,274,0,0" VerticalAlignment="Top" Height="21" Width="77" RenderTransformOrigin="0.966,0.758" Click="Logoutbtn_Click"/>
+        <Label x:Name="Passwordlbl" Content="Password: " HorizontalAlignment="Left" Margin="44,36,0,0" VerticalAlignment="Top" Width="66"/>
+        <TextBox x:Name="Passwordtxb" IsReadOnly="True" BorderThickness="0" Visibility="Visible" HorizontalAlignment="Left" Margin="114,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
     </Grid>
 </Window>

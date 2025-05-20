@@ -1,0 +1,16 @@
+﻿<Window x:Class="KSVA2._0_WPF.Views.StatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KSVA2._0_WPF.Views"
+        Title="Statistics" Height="300" Width="400">
+    <StackPanel Margin="20">
+        <TextBlock FontSize="20" FontWeight="Bold" Text="📊 Teacher Statistics" Margin="0 0 0 10"/>
+        <TextBlock Name="SubjectText" Margin="0 0 0 10"/>
+        <TextBlock Name="OrdersStatusText" Margin="0 0 0 10"/>
+        <TextBlock Name="AvgRatingText" Margin="0 0 0 10"/>
+        <TextBlock Name="OrdersThisMonthText" Margin="0 0 0 10"/>
+        <Button Content="Close" Width="80" HorizontalAlignment="Right" Click="Close_Click"/>
+    </StackPanel>
+</Window>

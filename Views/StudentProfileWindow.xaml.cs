@@ -36,15 +36,18 @@ namespace KSVA2._0_WPF.Views
         {
             //txbs
             Nametxb.IsReadOnly = false;
+            Passwordtxb.IsReadOnly = false;
             Phonetxb.IsReadOnly = false;
             Dobtxb.IsReadOnly = false;
             //thick
             Nametxb.BorderThickness = new Thickness(2);
+            Passwordtxb.BorderThickness = new Thickness(2);
             Phonetxb.BorderThickness = new Thickness(2);
             Dobtxb.BorderThickness = new Thickness(2); 
 
 
             Changebtn.IsEnabled = false;
+            Logoutbtn.IsEnabled = false;
             Applybtn.IsEnabled = true;
             Cancelbtn.IsEnabled = true;
         }
@@ -62,6 +65,7 @@ namespace KSVA2._0_WPF.Views
             profileservice.Change(
                 SessionManager.CurrentUser.user_id,
                 Nametxb.Text,
+                Passwordtxb.Text,
                 Phonetxb.Text,
                 DateOnly.Parse(Dobtxb.Text));
 
@@ -69,15 +73,18 @@ namespace KSVA2._0_WPF.Views
 
             //txbs
             Nametxb.IsReadOnly = true;
+            Passwordtxb.IsReadOnly = true;
             Phonetxb.IsReadOnly = true;
             Dobtxb.IsReadOnly = true;
             //thick
             Nametxb.BorderThickness = new Thickness(0);
+            Passwordtxb.BorderThickness = new Thickness(0);
             Phonetxb.BorderThickness = new Thickness(0);
             Dobtxb.BorderThickness = new Thickness(0);
 
 
             Changebtn.IsEnabled = true;
+            Logoutbtn.IsEnabled = true;
             Applybtn.IsEnabled = false;
             Cancelbtn.IsEnabled = false;
 
@@ -87,15 +94,18 @@ namespace KSVA2._0_WPF.Views
         {
             //txbs
             Nametxb.IsReadOnly = true;
+            Passwordtxb.IsReadOnly = true;
             Phonetxb.IsReadOnly = true;
             Dobtxb.IsReadOnly = true;
             //thick
             Nametxb.BorderThickness = new Thickness(0);
+            Passwordtxb.BorderThickness = new Thickness(0);
             Phonetxb.BorderThickness = new Thickness(0);
             Dobtxb.BorderThickness = new Thickness(0);
 
 
             Changebtn.IsEnabled = true;
+            Logoutbtn.IsEnabled = true;
             Applybtn.IsEnabled = false;
             Cancelbtn.IsEnabled = false;
 
@@ -105,9 +115,27 @@ namespace KSVA2._0_WPF.Views
         private void FillData()
         {
             Nametxb.Text = SessionManager.CurrentUser.name;
+            Passwordtxb.Text = SessionManager.CurrentUser.password;
             Phonetxb.Text = SessionManager.CurrentUser.phone;
             Roletxb.Text = SessionManager.CurrentUser.role;
             Dobtxb.Text = SessionManager.CurrentUser.date_of_birth.ToString();
+        }
+
+        private void Logoutbtn_Click(object sender, RoutedEventArgs e)
+        {
+            SessionManager.ClearSession();
+            new LoginWIndow().Show();
+
+            this.Close();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window is MainWindow)
+                {
+                    window.Close();
+                    break;
+                }
+            }
         }
     }
 }

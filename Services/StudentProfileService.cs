@@ -17,7 +17,7 @@ namespace KSVA2._0_WPF.Services
         {
             _context = new ApplicationContext();
         }
-        public void Change(int userid, string new_name, string new_phone, DateOnly new_dateofbirth)
+        public void Change(int userid, string new_name, string new_password, string new_phone, DateOnly new_dateofbirth)
         {
             var user = _context.users.FirstOrDefault(u => u.user_id == userid);
             if (user == null)
@@ -27,6 +27,7 @@ namespace KSVA2._0_WPF.Services
             }
 
             user.name = new_name;
+            user.password = new_password;
             user.phone = new_phone;
             user.date_of_birth = new_dateofbirth;
 

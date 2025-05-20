@@ -20,7 +20,7 @@ namespace KSVA2._0_WPF.Services
             var user = new user
             {
                 name = username,
-                password = PassHashService.Hash(password),
+                password = password,
                 phone = phone,
                 date_of_birth = dob,
                 role = role

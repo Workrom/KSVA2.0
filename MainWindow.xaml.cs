@@ -22,17 +22,15 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        MainContent.Content = new SearchWindow_uc();
+    }
+    private void SearchButton_Click(object sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new SearchWindow_uc();
     }
 
-    private void Profilebtn_Click(object sender, RoutedEventArgs e)
+    private void OrdersButton_Click(object sender, RoutedEventArgs e)
     {
-        if (SessionManager.CurrentUser.role == "student")
-        {
-            new StudentProfileWindow().Show();
-        }
-        else if(SessionManager.CurrentUser.role == "teacher")
-        {
-            new TeacherProfileWindow().Show();
-        }
+        MainContent.Content = new OrderWindow_uc();
     }
 }

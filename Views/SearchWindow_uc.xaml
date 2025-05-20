@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="KSVA2._0_WPF.Views.SearchWindow_uc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KSVA2._0_WPF.Views"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid x:Name="Teachersdg" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,173,0,0"/>
+        <Button x:Name="Searchllbl" Content="Search" HorizontalAlignment="Left" Margin="255,10,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="48" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" Foreground="DarkSlateGray" Click="Searchllbl_Click" RenderTransformOrigin="1.326,0.532"/>
+        <Button x:Name="Profilebtn" HorizontalAlignment="Left" Margin="726,16,0,0" VerticalAlignment="Top" Height="53" Width="53" RenderTransformOrigin="0.493,0.518" Click="Profilebtn_Click">
+            <Image Source="/Images/profile.jpg" />
+        </Button>
+        <TextBox x:Name="Nametxb" HorizontalAlignment="Left" Margin="21,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <CheckBox x:Name="Namecbx" Tag="Nametxb"  Content="Name" HorizontalAlignment="Left" Margin="55,117,0,0" VerticalAlignment="Top" Checked="FilterCheckBox_Checked" Unchecked="FilterCheckBox_Unchecked"/>
+        <CheckBox x:Name="Expertisecbx" Tag="Expertisecmx" Content="Expertise" HorizontalAlignment="Left" Margin="229,117,0,0" VerticalAlignment="Top" Checked="FilterCheckBox_Checked" Unchecked="FilterCheckBox_Unchecked"/>
+        <ComboBox x:Name="Expertisecmx" HorizontalAlignment="Left" Margin="203,137,0,0" VerticalAlignment="Top" Width="120" Height="20" IsEnabled="False">
+            <ComboBoxItem Content="high school"/>
+            <ComboBoxItem Content="university"/>
+            <ComboBoxItem Content="scientist"/>
+        </ComboBox>
+        <CheckBox x:Name="Subjectcbx" Tag="Subjectcmx" Content="Subject" HorizontalAlignment="Left" Margin="412,117,0,0" VerticalAlignment="Top" Checked="FilterCheckBox_Checked" Unchecked="FilterCheckBox_Unchecked"/>
+        <ComboBox x:Name="Subjectcmx" HorizontalAlignment="Left" Margin="381,139,0,0" VerticalAlignment="Top" Width="120" Height="18" IsEnabled="False"></ComboBox>
+        <Slider x:Name="Pricesdr" HorizontalAlignment="Left" Margin="564,139,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <CheckBox x:Name="Pricecbx" Tag="Pricesdr" Content="Price" HorizontalAlignment="Left" Margin="596,120,0,0" VerticalAlignment="Top" Checked="FilterCheckBox_Checked" Unchecked="FilterCheckBox_Unchecked"/>
+        <TextBlock x:Name="PriceValueText" Text="{Binding ElementName=Pricesdr, Path=Value, StringFormat=F0}" HorizontalAlignment="Left" Margin="690,139,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Orderbtn" Content="Order" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="48" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" Foreground="DarkSlateGray" Click="Orderbtn_Click"/>
+        <Button x:Name="ProfileLbtn" Content="Look" HorizontalAlignment="Right" Margin="0,10,150,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="48" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" Foreground="DarkSlateGray" Click="ProfileLbtn_Click"/>
+    </Grid>
+</UserControl>
